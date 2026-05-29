@@ -1,0 +1,6 @@
+[modules.cisa-kev-watch]
+enabled = true
+poll_interval_seconds = 3600
+feed_url = "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"
+max_events_per_poll = 25
+
