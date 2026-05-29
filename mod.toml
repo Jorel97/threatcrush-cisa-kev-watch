@@ -1,0 +1,22 @@
+[module]
+name = "cisa-kev-watch"
+version = "0.1.0"
+description = "Polls the public CISA KEV catalog and emits new exploited-vulnerability ThreatEvents."
+author = "Codex for Jorel97"
+license = "MIT"
+homepage = "https://github.com/Jorel97/threatcrush-cisa-kev-watch"
+
+[module.pricing]
+type = "free"
+
+[module.requirements]
+threatcrush = ">=0.2.0"
+os = ["linux", "darwin"]
+capabilities = ["network:outbound", "threat-intel:feed"]
+
+[module.config.defaults]
+enabled = true
+poll_interval_seconds = 3600
+feed_url = "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"
+max_events_per_poll = 25
+
